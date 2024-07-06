@@ -1,0 +1,29 @@
+services:
+  # web:
+  #   build:
+  #     context: ./.
+  #     dockerfile: dev.Dockerfile
+  #     tags:
+  #       - "greezye:frontend"
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - /app/node_modules
+  #     - .:/app
+  # tests:
+  #   build:
+  #     context: ./.
+  #     dockerfile: dev.Dockerfile
+  #   volumes:
+  #     - /app/node_modules
+  #     - .:/app
+  #   command: "npm test"
+
+    web:
+      build:
+        context: ./.
+        dockerfile: prod.Dockerfile
+        tags:
+          - "greezye:frontend"
+      ports:
+        - "8080:80"
